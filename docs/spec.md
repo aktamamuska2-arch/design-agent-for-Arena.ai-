@@ -609,6 +609,7 @@ See [HyperFrames](partners/hyperframes.md). Summary:
 | `content-brief` | intake for vague asks; at most two questions with reasons, otherwise decide and say so |
 | `brand-design` | concept gate, ground/accent/type framework, preserving a supplied reference |
 | `design-wiki` | public doctrine: hierarchy, typography, color, layout, platform specs, data-viz, diagrams, review rubric |
+| `ui-ux-design` | web and product UI craft: anti-slop taste, per-type density floors, interaction minimums, twelve JSX pattern references (adapted from open-codesign, MIT) |
 | `stills` (from the internal ad-creative) | HTML-to-image ads, banners, carousels, paged PDFs |
 | `image-ops`, `gif-edit`, `visual-verify` | deterministic pixel work; checking your own renders |
 | `data-viz` | charts, diagrams, stat cards |
