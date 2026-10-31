@@ -4,6 +4,13 @@
 
 ### Added
 
+- `ui-ux-design`: a new judgment skill for web-shaped work (landing pages, marketing sites, pricing
+  pages, dashboards, app screens, chat UIs). It brings the anti-slop taste rules, the eight
+  artifact-type density floors, the interaction hard minimums and twelve JSX pattern references,
+  transplanted byte-for-byte from the `ui-ux-design` skill (MIT, adapted from OpenCoworkAI/open-codesign)
+  retrieved from Drive. The brand pack still outranks its craft defaults, the sandbox still has no
+  network, and delivery is still `upload_files`; the fourteen reconciled contradictions are recorded
+  in `skills/ui-ux-design/references/conflicts.md`. Routing is in `media-production`.
 - Image generation goes through the LangSmith Gateway when there is no `OPENAI_API_KEY` and the
   deployment uses the gateway (a `langsmith:` model or `LANGSMITH_GATEWAY_API_KEY`); a gateway
   workspace with no OpenAI key says so.

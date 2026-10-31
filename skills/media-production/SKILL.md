@@ -16,6 +16,7 @@ Pick the pipeline from what the person will receive, then open its skill.
 | A generated image, texture or plate | `generate_image`, then image-ops | `image-generation` |
 | A GIF | a short render or clip, palette-optimized | `gif-edit` |
 | Thumbnails | a set of stills with legibility checks | `thumbnails` |
+| A landing page, marketing site, pricing page, dashboard or app screen | an HTML prototype in the project folder | `ui-ux-design`, `stills` |
 | A storyboard | frames from HTML or HyperFrames snapshots, one contact sheet | `storyboard` |
 | A video, animation or motion graphic | storyboard, animatic, HyperFrames composition, render | `storyboard`, `motion-direction`, `hyperframes` |
 | A 1-3 minute launch film | the `launch_film` pipeline (`run_pipeline`) | `launch-film` |
@@ -28,7 +29,9 @@ otherwise decide and say what you decided.
 
 Judgment sits beside every pipeline: `brand-design` for the concept gate, ground, accent and type,
 and for keeping a supplied reference's structure; `design-wiki` for hierarchy, typography, colour,
-layout, platform specs and the review rubric. For a job with several outputs or a hard requirement,
+layout, platform specs and the review rubric; `ui-ux-design` for anything web-shaped — the anti-slop
+taste rules, the per-type density floors and the interaction minimums, with the brand pack still
+outranking all three. For a job with several outputs or a hard requirement,
 write `artifact-contract.json` from
 [brand-design's example](../brand-design/references/artifact-contract.example.json) and check it
 with `artifact-contract.mjs` at plan and final.

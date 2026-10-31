@@ -69,6 +69,11 @@ behind them.
   LangChain's coding-agent skills under `.agents/skills/`) and are listed in `skills-lock.json`
   (each upstream's repo, commit and license, per-file sha256). Never patch vendored files; override
   in a sibling skill or summary of ours, or upstream the change. CI fails on drift.
+- `skills/ui-ux-design/`: ours, but derived — craft directives and JSX pattern references
+  transplanted byte-for-byte from an MIT-licensed upstream skill and reconciled against the brand
+  pack in `references/conflicts.md`. Its `references/*.v1.txt` and `references/components/*.jsx` are
+  frozen: a rule that needs changing is stated in `SKILL.md`, never edited into the source. See
+  [docs/ui-ux-design.md](docs/ui-ux-design.md) for the retrieval record and the merge map.
 - `workspace/brand/`: the active brand (tokens, logos, voice, graphic language). The sample brand
   ships in `examples/brands/`; the user's own brand is Git-ignored.
 - `workspace/references/`: the user's reference films and teardowns. Git-ignored. Never commit
