@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Si Kecil — Hari Pertamanya · 30s</title>
+<style>
+  :root {
+    --ink: #fdf3e3;
+    --dim: #c9b39a;
+    --bg: #150f14;
+    --card: rgba(255, 240, 220, .055);
+    --edge: rgba(255, 226, 190, .16);
+    --sun: #ffb545;
+    --rose: #ff8fa3;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background:
+      radial-gradient(120% 90% at 78% 4%, #6b3f52 0%, transparent 55%),
+      radial-gradient(110% 80% at 10% 100%, #24323a 0%, transparent 60%),
+      var(--bg);
+    color: var(--ink);
+    font: 15px/1.55 ui-sans-serif, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 34px 22px 80px; }
+  header { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
+  h1 {
+    margin: 0; font-size: clamp(28px, 4.4vw, 46px); line-height: 1.02; letter-spacing: -.02em;
+    font-family: ui-serif, Georgia, "Times New Roman", serif; font-weight: 600;
+  }
+  h1 em { font-style: normal; color: var(--sun); }
+  .lede { margin: 8px 0 0; color: var(--dim); max-width: 46ch; }
+  .badges { display: flex; gap: 8px; flex-wrap: wrap; }
+  .badge {
+    border: 1px solid var(--edge); background: var(--card); color: var(--dim);
+    border-radius: 999px; padding: 5px 11px; font-size: 12px; letter-spacing: .04em; text-transform: uppercase;
+  }
+  .badge b { color: var(--ink); font-weight: 600; }
+
+  .stage {
+    position: relative; border-radius: 18px; overflow: hidden; background: #000;
+    border: 1px solid var(--edge);
+    box-shadow: 0 30px 80px -30px rgba(0,0,0,.95), 0 0 0 1px rgba(255,255,255,.03) inset;
+  }
+  video { display: block; width: 100%; height: auto; background: #000; aspect-ratio: 16 / 9; }
+  .bar { display: flex; align-items: center; gap: 14px; padding: 12px 16px; background: rgba(12,8,10,.72); border-top: 1px solid var(--edge); flex-wrap: wrap; }
+  button {
+    font: inherit; color: var(--ink); cursor: pointer;
+    background: rgba(255,240,220,.1); border: 1px solid var(--edge);
+    border-radius: 10px; padding: 7px 14px; transition: background .15s, transform .1s;
+  }
+  button:hover { background: rgba(255,240,220,.2); }
+  button:active { transform: translateY(1px); }
+  button.primary { background: var(--sun); border-color: transparent; color: #2a1608; font-weight: 650; }
+  button.primary:hover { background: #ffc76d; }
+  .tc { font-variant-numeric: tabular-nums; color: var(--dim); font-size: 13px; letter-spacing: .06em; }
+  .spacer { flex: 1 }
+  a.dl { color: var(--dim); font-size: 13px; text-decoration: none; border-bottom: 1px dotted currentColor; }
+  a.dl:hover { color: var(--ink); }
+
+  h2 { font-family: ui-serif, Georgia, serif; font-weight: 600; font-size: 22px; margin: 40px 0 6px; letter-spacing: -.01em; }
+  h2 span { color: var(--dim); font-family: inherit; font-size: 14px; font-weight: 400; letter-spacing: 0; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(232px, 1fr)); gap: 12px; margin-top: 16px; }
+  .card {
+    text-align: left; padding: 14px 15px; border-radius: 13px; border: 1px solid var(--edge);
+    background: var(--card); display: flex; flex-direction: column; gap: 4px; min-height: 104px;
+  }
+  .card:hover { background: rgba(255,240,220,.12); border-color: rgba(255,214,150,.42); }
+  .card .no { font-size: 11px; letter-spacing: .16em; color: var(--sun); text-transform: uppercase; }
+  .card .name { font-weight: 620; font-size: 15px; }
+  .card .how { font-size: 12.5px; color: var(--dim); line-height: 1.45; }
+  .card .at { margin-top: auto; font-size: 12px; color: var(--rose); font-variant-numeric: tabular-nums; letter-spacing: .04em; }
+
+  .stills { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 16px; }
+  @media (min-width: 800px) { .stills { grid-template-columns: 3fr 2fr; } }
+  figure { margin: 0; border: 1px solid var(--edge); border-radius: 14px; overflow: hidden; background: var(--card); }
+  figure img { display: block; width: 100%; height: auto; }
+  figcaption { padding: 9px 13px; font-size: 12.5px; color: var(--dim); }
+  footer { margin-top: 46px; color: #8d7d6f; font-size: 12.5px; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: var(--ink); background: rgba(255,240,220,.09); padding: 2px 6px; border-radius: 6px; }
+  .flash { animation: flash .5s ease; }
+  @keyframes flash { 0% { box-shadow: 0 0 0 0 rgba(255,181,69,.75); } 100% { box-shadow: 0 0 0 22px rgba(255,181,69,0); } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Si Kecil — <em>Hari Pertamanya</em></h1>
+      <p class="lede">Satu menit pertama kehidupan seekor anak ayam: menetas, jatuh, bangkit, dan akhirnya terbang. Digambar sebagai vektor, dianimasikan dengan 12 prinsip Disney.</p>
+    </div>
+    <div class="badges">
+      <span class="badge"><b>30.00</b> detik</span>
+      <span class="badge"><b>1920×1080</b></span>
+      <span class="badge"><b>30</b> fps</span>
+      <span class="badge"><b>900</b> frame</span>
+    </div>
+  </header>
+
+  <div class="stage" id="stage">
+    <video id="v" src="../renders/si-kecil.mp4" poster="../review/poster.png" preload="metadata" playsinline controls></video>
+    <div class="bar">
+      <button class="primary" id="play">▶ Putar</button>
+      <button id="restart">↺ Dari awal</button>
+      <span class="tc" id="tc">00:00.00 / 00:30.00</span>
+      <span class="spacer"></span>
+      <a class="dl" href="../renders/si-kecil.mp4" download>unduh MP4 (22 MB)</a>
+    </div>
+  </div>
+
+  <h2>12 prinsip, bisa diklik <span>— lompat ke detiknya</span></h2>
+  <div class="grid" id="chapters"></div>
+
+  <h2>Bukti QC <span>— tiap 0.67 detik</span></h2>
+  <div class="stills">
+    <figure>
+      <img src="../review/contact-sheet.png" alt="Contact sheet, seluruh 30 detik" loading="lazy" />
+      <figcaption>Contact sheet — 45 frame, urutan cerita terbaca tanpa audio.</figcaption>
+    </figure>
+    <figure>
+      <img src="../review/poster.png" alt="Poster akhir" loading="lazy" />
+      <figcaption>Poster — frame 28.6 s, saat ia akhirnya terbang.</figcaption>
+    </figure>
+  </div>
+
+  <footer>
+    Dibangun di dalam harness repo: satu <code>gsap.timeline()</code> yang di-<em>pause</em>, <code>t = frame/30</code>, tiap frame = SVG deterministik tanpa jaringan.
+    Detail teknis di <code>examples/chick-first-day/README.md</code>.
+  </footer>
+</div>
+
+<script>
+const v = document.getElementById('v');
+const tc = document.getElementById('tc');
+const play = document.getElementById('play');
+const restart = document.getElementById('restart');
+const stage = document.getElementById('stage');
+
+const PRINCIPLES = [
+  ['Squash & stretch', 'Tubuh gepeng 1.62×0.56 saat duduk, lalu melar saat lompat.', 9.02],
+  ['Antisipasi', 'Dua tahap: menunduk sebelum menetas, dan mengendap sebelum menerkam.', 14.26],
+  ['Staging', 'Kamera mundur ke 0.82× agar seluruh lompatan terbaca dalam satu bingkai.', 13.0],
+  ['Pose to pose', 'Pose kunci ditahan, bukan digambar asal jalan.', 5.6],
+  ['Follow-through', 'Kepala tertinggal 4–8 frame; cangkang baru lepas 0.6 s setelah tumble.', 15.48],
+  ['Slow in, slow out', 'Naik melambat di puncak, gravitasi mengambil alih saat turun.', 21.6],
+  ['Arcs', 'Lompatan, tumble, dan luncuran semuanya busur, bukan garis lurus.', 14.44],
+  ['Secondary action', 'Rumput bergoyang, kupu-kupu mengepak, biji berputar — pelan-pelan saja.', 17.9],
+  ['Timing', 'Retak cangkang 1 frame, duduk 3 frame, tahan 0.42 s sebelum terbang.', 24.5],
+  ['Exaggeration', 'Mata melotot, putaran 360° penuh, spin kegirangan di akhir.', 27.98],
+  ['Solid drawing', 'Siluet jelas di tiap pose — rig dengan outline, rim light, dan volume.', 7.4],
+  ['Appeal', 'Mata besar, pipi merona, dan kemenangan kecil yang pantas dirayakan.', 28.4],
+];
+
+const grid = document.getElementById('chapters');
+PRINCIPLES.forEach(([name, how, at], i) => {
+  const b = document.createElement('button');
+  b.className = 'card';
+  b.innerHTML = `<span class="no">${String(i + 1).padStart(2, '0')}</span>
+    <span class="name">${name}</span>
+    <span class="how">${how}</span>
+    <span class="at">▶ ${at.toFixed(2)} s</span>`;
+  b.onclick = () => {
+    v.currentTime = at;
+    v.play().catch(() => {});
+    stage.classList.remove('flash');
+    void stage.offsetWidth;
+    stage.classList.add('flash');
+    stage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
+  grid.appendChild(b);
+});
+
+const fmt = (s) => {
+  const m = Math.floor(s / 60), sec = s - m * 60;
+  return `${String(m).padStart(2, '0')}:${sec.toFixed(2).padStart(5, '0')}`;
+};
+const tick = () => {
+  tc.textContent = `${fmt(v.currentTime)} / ${fmt(v.duration || 30)}`;
+  play.textContent = v.paused ? '▶ Putar' : '❚❚ Jeda';
+};
+v.addEventListener('timeupdate', tick);
+v.addEventListener('loadedmetadata', tick);
+v.addEventListener('play', tick);
+v.addEventListener('pause', tick);
+v.addEventListener('ended', () => { play.textContent = '↺ Putar lagi'; });
+
+play.onclick = () => {
+  if (v.paused) {
+    if (v.ended) v.currentTime = 0;
+    v.play().catch(() => {});
+  } else {
+    v.pause();
+  }
+};
+restart.onclick = () => { v.currentTime = 0; v.play().catch(() => {}); };
+</script>
+</body>
+</html>
