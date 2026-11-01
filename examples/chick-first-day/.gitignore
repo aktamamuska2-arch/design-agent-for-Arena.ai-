@@ -1,0 +1,8 @@
+node_modules/
+# 900 intermediate PNGs (2.7 GB) — rebuild with `npm run frames`
+renders/frames/
+# regenerable from timeline.json + make-score.py
+audio/score.wav
+# scratch frames and single-shot previews
+review/*.svg
+review/tmp/
