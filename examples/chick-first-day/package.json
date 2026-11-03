@@ -1,0 +1,17 @@
+{
+  "name": "chick-first-day",
+  "private": true,
+  "type": "module",
+  "description": "Si Kecil — hari pertamanya. A 30s cartoon short built on a seekable GSAP timeline.",
+  "scripts": {
+    "frame": "node scripts/preview.mjs",
+    "frames": "node scripts/render-frames.mjs",
+    "score": "python3 audio/make-score.py",
+    "encode": "bash scripts/encode.sh",
+    "build": "npm run frames && npm run score && npm run encode"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "gsap": "^3.13.0"
+  }
+}
